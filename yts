@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "youtube link:"
+read link
+
+yt-dlp -i --extract-audio --audio-format mp3 --audio-quality 0 --add-metadata -o $HOME/storage/shared/Download/%\(title\)s.%\(ext\)s $link
